@@ -3,8 +3,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true,|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true,|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -13,10 +13,10 @@
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|imaage|string|-|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|text|text|-|
+|image|string|-|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -37,7 +37,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|nickname|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :commens
