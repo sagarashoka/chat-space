@@ -1,0 +1,30 @@
+.main_chat
+  .main_chat_1
+    .main_chat_1__left-box
+      .main_chat_1__left-box__current-group
+        nishionaokisan
+      .main_chat_1__left-box__member-list
+        Member: 
+        .main_chat_1__left-box__member-list__member
+          shoka
+    =link_to "Edit","#", class:'main_chat_1__edit-btn'
+
+  .main_chat_2
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          shoka
+        %p.message__upper-info__date
+          2020/06/25(Thu) 13:59:02
+      %p.message__text
+        いつも有難うございます
+  .main_chat_3
+    %form.new_message{action:"/#"}
+      .input-box
+        %input{type:"text",placeholder:"type a message",name:"message[content]",class:"input-box__text"}
+        %label.input-box__image{for:"message_image"}
+          %i.far.fa-image
+          %input.input-box__image__file{type:"file"}
+      %input.submit-btn{type:"submit",value:"Send"}
+
+  
