@@ -46,6 +46,10 @@
 
 .group {
   margin-bottom: 40px;
+  a {
+    color: white;
+    text-decoration: none;
+    }
   &__name {
   font-size: 15px;
   margin-bottom: 5px;
@@ -141,6 +145,7 @@
 .input-box {
   position: relative;
   width: 100%;
+  display: flex;
   &__text {
     height: 50px;
     width: 100%;
@@ -152,7 +157,7 @@
   &__image {
     font-size: 1.3rem;
     position: absolute;
-    top: 10px;
+    top: 15px;
     right: 10px;
     cursor: pointer;
     &__file {

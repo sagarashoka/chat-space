@@ -4,14 +4,16 @@
       %p.side_bar-1__box__username
         = current_user.name
       .side_bar-1__box__menu
-        =link_to "#" do
+        =link_to new_group_path(current_user) do
           = icon('fa','edit', class: 'icon')
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: 'icon')
 
   .side_bar_2
-    .group
-      .group__name
-        nisionaokisan
-      .group__latest-message
-        いつも有難うございます
+    - current_user.groups.each do |group|
+      .group
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__latest-message
+            = group.show_last_message            
